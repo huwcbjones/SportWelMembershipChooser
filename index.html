@@ -27,38 +27,32 @@
                     <div class="panel-heading"><h4 class="panel-title">Membership Type</h4></div>
                     <div class="panel-collapse collapse in" id="membership-panel">
                         <div class="panel-body">
-                            <div class="form-group" id="membershipGroup">
-                                <div class="row">
-                                    <div class="col-xs-12">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group" id="membershipGroup">
                                         <label>Please select membership type:</label>
                                         <label class="checkbox">
-                                            <input type="radio" name="membership" value="student" id="membershipStudent"
-                                                   required/>
+                                            <input type="radio" name="membership" value="student" id="membershipStudent" required/>
                                             Student (or 1st Year Alumni)
                                         </label>
                                         <label class="checkbox">
-                                            <input type="radio" name="membership" value="staff" id="membershipStaff"
-                                                   required/>
+                                            <input type="radio" name="membership" value="staff" id="membershipStaff" required/>
                                             Staff
                                         </label>
                                         <label class="checkbox">
-                                            <input type="radio" name="membership" value="commpart" id="membershipCommPart"
-                                                   required/>
+                                            <input type="radio" name="membership" value="commpart" id="membershipCommPart" required/>
                                             Community Partner
                                         </label>
                                         <label class="checkbox">
-                                            <input type="radio" name="membership" value="public" id="membershipPublic"
-                                                   required/>
+                                            <input type="radio" name="membership" value="public" id="membershipPublic" required/>
                                             Public
                                         </label>
                                         <label class="checkbox">
-                                            <input type="radio" name="membership" value="youth"
-                                                   id="membershipYouth" required/>
+                                            <input type="radio" name="membership" value="youth" id="membershipYouth" required/>
                                             Youth (15-16)
                                         </label>
                                         <label class="checkbox">
-                                            <input type="radio" name="membership" value="child"
-                                                   id="membershipChild" required/>
+                                            <input type="radio" name="membership" value="child" id="membershipChild" required/>
                                             Child (4-15)
                                         </label>
                                         <span id="membershipHelp"
@@ -70,8 +64,7 @@
                                 <div class="col-xs-6 text-left">
                                 </div>
                                 <div class="col-xs-6 text-right">
-                                    <input type="button" class="btn btn-primary" onclick="goToSportsTeams()"
-                                           value="Next"/>
+                                    <input type="button" class="btn btn-primary" onclick="goToSportsTeams()" value="Next"/>
                                 </div>
                             </div>
                         </div>
@@ -116,84 +109,84 @@
                     <div class="panel-heading"><h4 class="panel-title">Facilities</h4></div>
                     <div class="panel-collapse collapse" id="facilities-panel">
                         <div class="panel-body">
-                            <div class="form-group" id="facilitiesField">
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <label>Please select the facilities you want to use (<em>outside of AU/Intramural Sports</em>):</label>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-10 col-xs-offset-1">
-                                            <div class="row">
-                                                <div class="col-xs-6">
-                                                    <h4>Jubilee Sports Centre</h4>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" name="facilities[]" value="jsc-pool" id="facilities-JSCPool">
-                                                        Swimming Pool
-                                                    </label>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" name="facilities[]" value="jsc-shb" id="facilitiesJSC-SportsHallBook">
-                                                        Sports Hall Bookings
-                                                    </label>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" name="facilities[]" value="jsc-tsshb" id="facilitiesJSC-TSSportsBook">
-                                                        Team Southampton Sports Hall Bookings
-                                                    </label>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" name="facilities[]" value="jsc-classes" id="facilitiesJSC-FitnessClasses">
-                                                        <abbr title="Jubilee Sports Hall">JSH</abbr>/<abbr
-                                                            title="Team Southampton Sports Hall">TSSH</abbr> Fitness
-                                                        Classes
-                                                    </label>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" name="facilities[]" value="jsc-gym" id="facilitiesJSC-gym">
-                                                        Fitness Suite (Gym)
-                                                    </label>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" name="facilities[]" value="jsc-bouldering" id="facilitiesJSC-bouldering">
-                                                        Bouldering Wall
-                                                    </label>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" name="facilities[]" value="jsc-martial" id="facilitiesJSC-martial">
-                                                        Martial Arts Studio
-                                                    </label>
-                                                </div>
-                                                <div class="col-xs-6">
-                                                    <h4>Mayflower</h4>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" name="facilities[]" value="may-gym" id="facilitiesMAY-gym">
-                                                        Gym
-                                                    </label>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" name="facilities[]" value="may-classes" id="facilitiesMAY-classes">
-                                                        Fitness Classes
-                                                    </label>
-                                                    <br/>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <label>Please select the facilities you want to use (<em>outside of AU/Intramural Sports</em>):</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-10 col-xs-offset-1">
+                                    <div class="form-group" id="facilitiesField">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <h4>Jubilee Sports Centre</h4>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="facilities[]" value="jsc-pool" id="facilities-JSCPool">
+                                                    Swimming Pool
+                                                </label>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="facilities[]" value="jsc-shb" id="facilitiesJSC-SportsHallBook">
+                                                    Sports Hall Bookings
+                                                </label>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="facilities[]" value="jsc-tsshb" id="facilitiesJSC-TSSportsBook">
+                                                    Team Southampton Sports Hall Bookings
+                                                </label>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="facilities[]" value="jsc-classes" id="facilitiesJSC-FitnessClasses">
+                                                    <abbr title="Jubilee Sports Hall">JSH</abbr>/<abbr
+                                                        title="Team Southampton Sports Hall">TSSH</abbr> Fitness
+                                                    Classes
+                                                </label>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="facilities[]" value="jsc-gym" id="facilitiesJSC-gym">
+                                                    Fitness Suite (Gym)
+                                                </label>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="facilities[]" value="jsc-bouldering" id="facilitiesJSC-bouldering">
+                                                    Bouldering Wall
+                                                </label>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="facilities[]" value="jsc-martial" id="facilitiesJSC-martial">
+                                                    Martial Arts Studio
+                                                </label>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <h4>Mayflower</h4>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="facilities[]" value="may-gym" id="facilitiesMAY-gym">
+                                                    Gym
+                                                </label>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="facilities[]" value="may-classes" id="facilitiesMAY-classes">
+                                                    Fitness Classes
+                                                </label>
+                                                <br/>
 
-                                                    <h4>Wide Lane</h4>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" name="facilities[]" value="wln-wln" id="facilitiesWLN-WideLane">
-                                                        Wide Lane (Rubber Crumb, Tennis, Netball)
-                                                    </label>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" name="facilities[]" value="wln-gym" id="facilitiesWLN-gym">
-                                                        Team Southampton Gym
-                                                    </label>
-                                                    <br/>
+                                                <h4>Wide Lane</h4>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="facilities[]" value="wln-wln" id="facilitiesWLN-WideLane">
+                                                    Wide Lane (Rubber Crumb, Tennis, Netball)
+                                                </label>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="facilities[]" value="wln-gym" id="facilitiesWLN-gym">
+                                                    Team Southampton Gym
+                                                </label>
+                                                <br/>
 
-                                                    <h4>Other</h4>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" name="facilities[]" value="oth-glen" id="facilitiesOTH-glen">
-                                                        Glen Eyre Gym
-                                                    </label>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" name="facilities[]" value="oth-connaught" id="facilitiesOTH-connaught">
-                                                        Connaught Gym
-                                                    </label>
-                                                    <label class="checkbox hidden" id="activeNationMembership">
-                                                        <input type="checkbox" name="facilities[]" value="oth-activenation" id="facilitiesOTH-activenation">
-                                                        Active Nation
-                                                    </label>
-                                                </div>
+                                                <h4>Other</h4>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="facilities[]" value="oth-glen" id="facilitiesOTH-glen">
+                                                    Glen Eyre Gym
+                                                </label>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="facilities[]" value="oth-connaught" id="facilitiesOTH-connaught">
+                                                    Connaught Gym
+                                                </label>
+                                                <label class="checkbox hidden" id="activeNationMembership">
+                                                    <input type="checkbox" name="facilities[]" value="oth-activenation" id="facilitiesOTH-activenation">
+                                                    Active Nation
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
@@ -210,7 +203,6 @@
                                            value="Next"/>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -218,171 +210,172 @@
                     <div class="panel-heading"><h4 class="panel-title">Frequency</h4></div>
                     <div class="panel-collapse collapse" id="frequency-panel">
                         <div class="panel-body">
-                            <div class="form-group" id="frequencyField">
-                                <div class="row">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <label>Please select how frequently you will use each facility. If you don't know, select do not know.<br/>
+                                        If you are planning to use a facility during Peak Time (4PM to 8PM), select Peak in addition to how frequently you
+                                        want to use the facility.</label>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group" id="frequencyField">
                                     <div class="col-xs-12">
-                                        <label>Please select how frequently you will use each facility. If you don't know, select do not know.<br/>
-                                            If you are planning to use a facility during Peak Time (4PM to 8PM), select Peak in addition to how frequently you
-                                            want to use the facility.</label>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                <tr>
+                                                    <th>Item</th>
+                                                    <th width="7.5%">Yearly</th>
+                                                    <th width="7.5%">Monthly</th>
+                                                    <th width="7.5%">Fortnightly</th>
+                                                    <th width="7.5%">Weekly</th>
+                                                    <th width="7.5%">Daily</th>
+                                                    <th width="7.5%">Don't Know</th>
+                                                    <th width="7.5%">Peak</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr id="freq-jsc-pool">
+                                                    <th>Swimming Pool</th>
+                                                    <td><input type="radio" name="frequency-jsc-pool" value="1"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-pool" value="12"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-pool" value="26"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-pool" value="52"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-pool" value="365"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-pool" value="0" checked/></td>
+                                                    <td><input type="checkbox" name="peak-jsc-pool"/></td>
+                                                </tr>
+                                                <tr id="freq-jsc-shb">
+                                                    <th>Sports Hall Bookings</th>
+                                                    <td><input type="radio" name="frequency-jsc-shb" value="1"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-shb" value="12"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-shb" value="26"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-shb" value="52"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-shb" value="365"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-shb" value="0" checked/></td>
+                                                    <td><input type="checkbox" name="peak-jsc-shb"/></td>
+                                                </tr>
+                                                <tr id="freq-jsc-tsshb">
+                                                    <th>Team Southampton Sports Hall Bookings</th>
+                                                    <td><input type="radio" name="frequency-jsc-tsshb" value="1"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-tsshb" value="12"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-tsshb" value="26"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-tsshb" value="52"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-tsshb" value="365"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-tsshb" value="0" checked/></td>
+                                                    <td><input type="checkbox" name="peak-jsc-tsshb"/></td>
+                                                </tr>
+                                                <tr id="freq-jsc-classes">
+                                                    <th><abbr title="Jubilee Sports Hall">JSH</abbr>/<abbr title="Team Southampton Sports Hall">TSSH</abbr>
+                                                        Fitness
+                                                        Classes
+                                                        </label></th>
+                                                    <td><input type="radio" name="frequency-jsc-classes" value="1"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-classes" value="12"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-classes" value="26"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-classes" value="52"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-classes" value="365"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-classes" value="0" checked/></td>
+                                                    <td><input type="checkbox" name="peak-jsc-classes"/></td>
+                                                </tr>
 
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <div class="table-responsive">
-                                                <table class="table table-bordered">
-                                                    <thead>
-                                                    <tr>
-                                                        <th>Item</th>
-                                                        <th width="7.5%">Yearly</th>
-                                                        <th width="7.5%">Monthly</th>
-                                                        <th width="7.5%">Fortnightly</th>
-                                                        <th width="7.5%">Weekly</th>
-                                                        <th width="7.5%">Daily</th>
-                                                        <th width="7.5%">Don't Know</th>
-                                                        <th width="7.5%">Peak</th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                    <tr id="freq-jsc-pool">
-                                                        <th>Swimming Pool</th>
-                                                        <td><input type="radio" name="frequency-jsc-pool" value="1"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-pool" value="12"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-pool" value="26"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-pool" value="52"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-pool" value="365"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-pool" value="0" checked/></td>
-                                                        <td><input type="checkbox" name="peak-jsc-pool"/></td>
-                                                    </tr>
-                                                    <tr id="freq-jsc-shb">
-                                                        <th>Sports Hall Bookings</th>
-                                                        <td><input type="radio" name="frequency-jsc-shb" value="1"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-shb" value="12"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-shb" value="26"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-shb" value="52"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-shb" value="365"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-shb" value="0" checked/></td>
-                                                        <td><input type="checkbox" name="peak-jsc-shb"/></td>
-                                                    </tr>
-                                                    <tr id="freq-jsc-tsshb">
-                                                        <th>Team Southampton Sports Hall Bookings</th>
-                                                        <td><input type="radio" name="frequency-jsc-tsshb" value="1"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-tsshb" value="12"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-tsshb" value="26"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-tsshb" value="52"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-tsshb" value="365"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-tsshb" value="0" checked/></td>
-                                                        <td><input type="checkbox" name="peak-jsc-tsshb"/></td>
-                                                    </tr>
-                                                    <tr id="freq-jsc-classes">
-                                                        <th><abbr title="Jubilee Sports Hall">JSH</abbr>/<abbr title="Team Southampton Sports Hall">TSSH</abbr>
-                                                            Fitness
-                                                            Classes
-                                                            </label></th>
-                                                        <td><input type="radio" name="frequency-jsc-classes" value="1"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-classes" value="12"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-classes" value="26"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-classes" value="52"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-classes" value="365"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-classes" value="0" checked/></td>
-                                                        <td><input type="checkbox" name="peak-jsc-classes"/></td>
-                                                    </tr>
+                                                <tr id="freq-jsc-gym">
+                                                    <th>Fitness Suite (Gym)</th>
+                                                    <td><input type="radio" name="frequency-jsc-gym" value="1"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-gym" value="12"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-gym" value="26"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-gym" value="52"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-gym" value="365"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-gym" value="0" checked/></td>
+                                                    <td><input type="checkbox" name="peak-jsc-gym"/></td>
+                                                </tr>
+                                                <tr id="freq-jsc-bouldering">
+                                                    <th>Bouldering Wall</th>
+                                                    <td><input type="radio" name="frequency-jsc-bouldering" value="1"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-bouldering" value="12"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-bouldering" value="26"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-bouldering" value="52"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-bouldering" value="365"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-bouldering" value="0" checked/></td>
+                                                    <td><input type="checkbox" name="peak-jsc-bouldering"/></td>
+                                                </tr>
+                                                <tr id="freq-jsc-martial">
+                                                    <th>Martial Arts Studio</th>
+                                                    <td><input type="radio" name="frequency-jsc-martial" value="1"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-martial" value="12"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-martial" value="26"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-martial" value="52"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-martial" value="365"/></td>
+                                                    <td><input type="radio" name="frequency-jsc-martial" value="0" checked/></td>
+                                                    <td><input type="checkbox" name="peak-jsc-martial"/></td>
+                                                </tr>
+                                                <tr id="freq-may-gym">
+                                                    <th>Mayflower Gym</th>
+                                                    <td><input type="radio" name="frequency-may-gym" value="1"/></td>
+                                                    <td><input type="radio" name="frequency-may-gym" value="12"/></td>
+                                                    <td><input type="radio" name="frequency-may-gym" value="26"/></td>
+                                                    <td><input type="radio" name="frequency-may-gym" value="52"/></td>
+                                                    <td><input type="radio" name="frequency-may-gym" value="365"/></td>
+                                                    <td><input type="radio" name="frequency-may-gym" value="0" checked/></td>
+                                                    <td><input type="checkbox" name="peak-may-gym"/></td>
+                                                </tr>
+                                                <tr id="freq-may-classes">
+                                                    <th>Mayflower Fitness Classes</th>
+                                                    <td><input type="radio" name="frequency-may-classes" value="1"/></td>
+                                                    <td><input type="radio" name="frequency-may-classes" value="12"/></td>
+                                                    <td><input type="radio" name="frequency-may-classes" value="26"/></td>
+                                                    <td><input type="radio" name="frequency-may-classes" value="52"/></td>
+                                                    <td><input type="radio" name="frequency-may-classes" value="365"/></td>
+                                                    <td><input type="radio" name="frequency-may-classes" value="0" checked/></td>
+                                                    <td><input type="checkbox" name="peak-may-classes"/></td>
+                                                </tr>
+                                                <tr id="freq-wln-wln">
+                                                    <th>Wide Lane (Rubber Crumb, Tennis, Netball)</th>
+                                                    <td><input type="radio" name="frequency-wln-wln" value="1"/></td>
+                                                    <td><input type="radio" name="frequency-wln-wln" value="12"/></td>
+                                                    <td><input type="radio" name="frequency-wln-wln" value="26"/></td>
+                                                    <td><input type="radio" name="frequency-wln-wln" value="52"/></td>
+                                                    <td><input type="radio" name="frequency-wln-wln" value="365"/></td>
+                                                    <td><input type="radio" name="frequency-wln-wln" value="0" checked/></td>
+                                                    <td><input type="checkbox" name="peak-wln-wln"/></td>
+                                                </tr>
+                                                <tr id="freq-wln-gym">
+                                                    <th>Team Southampton Gym</th>
+                                                    <td><input type="radio" name="frequency-wln-gym" value="1"/></td>
+                                                    <td><input type="radio" name="frequency-wln-gym" value="12"/></td>
+                                                    <td><input type="radio" name="frequency-wln-gym" value="26"/></td>
+                                                    <td><input type="radio" name="frequency-wln-gym" value="52"/></td>
+                                                    <td><input type="radio" name="frequency-wln-gym" value="365"/></td>
+                                                    <td><input type="radio" name="frequency-wln-gym" value="0" checked/></td>
+                                                    <td><input type="checkbox" name="peak-wln-gym"/></td>
+                                                </tr>
+                                                <tr id="freq-oth-glen">
+                                                    <th>Glen Eyre Gym</th>
+                                                    <td><input type="radio" name="frequency-oth-glen" value="1"/></td>
+                                                    <td><input type="radio" name="frequency-oth-glen" value="12"/></td>
+                                                    <td><input type="radio" name="frequency-oth-glen" value="26"/></td>
+                                                    <td><input type="radio" name="frequency-oth-glen" value="52"/></td>
+                                                    <td><input type="radio" name="frequency-oth-glen" value="365"/></td>
+                                                    <td><input type="radio" name="frequency-oth-glen" value="0"/></td>
+                                                    <td><input type="checkbox" name="peak-oth-glen"/></td>
+                                                </tr>
+                                                <tr id="freq-oth-connaught">
+                                                    <th>Connaught Gym</th>
+                                                    <td><input type="radio" name="frequency-oth-connaught" value="1"/></td>
+                                                    <td><input type="radio" name="frequency-oth-connaught" value="12"/></td>
+                                                    <td><input type="radio" name="frequency-oth-connaught" value="26"/></td>
+                                                    <td><input type="radio" name="frequency-oth-connaught" value="52"/></td>
+                                                    <td><input type="radio" name="frequency-oth-connaught" value="365"/></td>
+                                                    <td><input type="radio" name="frequency-oth-connaught" value="0" checked/></td>
+                                                    <td><input type="checkbox" name="peak-oth-connaught"/></td>
+                                                </tr>
 
-                                                    <tr id="freq-jsc-gym">
-                                                        <th>Fitness Suite (Gym)</th>
-                                                        <td><input type="radio" name="frequency-jsc-gym" value="1"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-gym" value="12"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-gym" value="26"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-gym" value="52"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-gym" value="365"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-gym" value="0" checked/></td>
-                                                        <td><input type="checkbox" name="peak-jsc-gym"/></td>
-                                                    </tr>
-                                                    <tr id="freq-jsc-bouldering">
-                                                        <th>Bouldering Wall</th>
-                                                        <td><input type="radio" name="frequency-jsc-bouldering" value="1"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-bouldering" value="12"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-bouldering" value="26"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-bouldering" value="52"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-bouldering" value="365"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-bouldering" value="0" checked/></td>
-                                                        <td><input type="checkbox" name="peak-jsc-bouldering"/></td>
-                                                    </tr>
-                                                    <tr id="freq-jsc-martial">
-                                                        <th>Martial Arts Studio</th>
-                                                        <td><input type="radio" name="frequency-jsc-martial" value="1"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-martial" value="12"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-martial" value="26"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-martial" value="52"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-martial" value="365"/></td>
-                                                        <td><input type="radio" name="frequency-jsc-martial" value="0" checked/></td>
-                                                        <td><input type="checkbox" name="peak-jsc-martial"/></td>
-                                                    </tr>
-                                                    <tr id="freq-may-gym">
-                                                        <th>Mayflower Gym</th>
-                                                        <td><input type="radio" name="frequency-may-gym" value="1"/></td>
-                                                        <td><input type="radio" name="frequency-may-gym" value="12"/></td>
-                                                        <td><input type="radio" name="frequency-may-gym" value="26"/></td>
-                                                        <td><input type="radio" name="frequency-may-gym" value="52"/></td>
-                                                        <td><input type="radio" name="frequency-may-gym" value="365"/></td>
-                                                        <td><input type="radio" name="frequency-may-gym" value="0" checked/></td>
-                                                        <td><input type="checkbox" name="peak-may-gym"/></td>
-                                                    </tr>
-                                                    <tr id="freq-may-classes">
-                                                        <th>Mayflower Fitness Classes</th>
-                                                        <td><input type="radio" name="frequency-may-classes" value="1"/></td>
-                                                        <td><input type="radio" name="frequency-may-classes" value="12"/></td>
-                                                        <td><input type="radio" name="frequency-may-classes" value="26"/></td>
-                                                        <td><input type="radio" name="frequency-may-classes" value="52"/></td>
-                                                        <td><input type="radio" name="frequency-may-classes" value="365"/></td>
-                                                        <td><input type="radio" name="frequency-may-classes" value="0" checked/></td>
-                                                        <td><input type="checkbox" name="peak-may-classes"/></td>
-                                                    </tr>
-                                                    <tr id="freq-wln-wln">
-                                                        <th>Wide Lane (Rubber Crumb, Tennis, Netball)</th>
-                                                        <td><input type="radio" name="frequency-wln-wln" value="1"/></td>
-                                                        <td><input type="radio" name="frequency-wln-wln" value="12"/></td>
-                                                        <td><input type="radio" name="frequency-wln-wln" value="26"/></td>
-                                                        <td><input type="radio" name="frequency-wln-wln" value="52"/></td>
-                                                        <td><input type="radio" name="frequency-wln-wln" value="365"/></td>
-                                                        <td><input type="radio" name="frequency-wln-wln" value="0" checked/></td>
-                                                        <td><input type="checkbox" name="peak-wln-wln"/></td>
-                                                    </tr>
-                                                    <tr id="freq-wln-gym">
-                                                        <th>Team Southampton Gym</th>
-                                                        <td><input type="radio" name="frequency-wln-gym" value="1"/></td>
-                                                        <td><input type="radio" name="frequency-wln-gym" value="12"/></td>
-                                                        <td><input type="radio" name="frequency-wln-gym" value="26"/></td>
-                                                        <td><input type="radio" name="frequency-wln-gym" value="52"/></td>
-                                                        <td><input type="radio" name="frequency-wln-gym" value="365"/></td>
-                                                        <td><input type="radio" name="frequency-wln-gym" value="0" checked/></td>
-                                                        <td><input type="checkbox" name="peak-wln-gym"/></td>
-                                                    </tr>
-                                                    <tr id="freq-oth-glen">
-                                                        <th>Glen Eyre Gym</th>
-                                                        <td><input type="radio" name="frequency-oth-glen" value="1"/></td>
-                                                        <td><input type="radio" name="frequency-oth-glen" value="12"/></td>
-                                                        <td><input type="radio" name="frequency-oth-glen" value="26"/></td>
-                                                        <td><input type="radio" name="frequency-oth-glen" value="52"/></td>
-                                                        <td><input type="radio" name="frequency-oth-glen" value="365"/></td>
-                                                        <td><input type="radio" name="frequency-oth-glen" value="0"/></td>
-                                                        <td><input type="checkbox" name="peak-oth-glen"/></td>
-                                                    </tr>
-                                                    <tr id="freq-oth-connaught">
-                                                        <th>Connaught Gym</th>
-                                                        <td><input type="radio" name="frequency-oth-connaught" value="1"/></td>
-                                                        <td><input type="radio" name="frequency-oth-connaught" value="12"/></td>
-                                                        <td><input type="radio" name="frequency-oth-connaught" value="26"/></td>
-                                                        <td><input type="radio" name="frequency-oth-connaught" value="52"/></td>
-                                                        <td><input type="radio" name="frequency-oth-connaught" value="365"/></td>
-                                                        <td><input type="radio" name="frequency-oth-connaught" value="0" checked/></td>
-                                                        <td><input type="checkbox" name="peak-oth-connaught"/></td>
-                                                    </tr>
-
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                             <div class="row">
@@ -396,7 +389,6 @@
                                            value="Calculate Membership"/>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -413,13 +405,14 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-xs-6 text-left">
+                                <div class="col-xs-4 text-left">
                                     <input type="button" class="btn btn-default btn-lg"
                                            onclick="location.reload()"
                                            value="Start Over"/>
+                                    <br class="visible-xs" />
                                 </div>
-                                <div class="col-xs-6 text-right">
-                                    <a href="#" class="btn btn-lg btn-primary" id="resultLink" target="_blank">View Membership Details</a>
+                                <div class="col-xs-8 text-right">
+                                    <a href="#" class="btn btn-lg btn-primary" id="resultLink" target="_blank">View More Details</a>
                                 </div>
                             </div>
                         </div>
