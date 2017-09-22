@@ -42,7 +42,7 @@
                                             Staff
                                         </label>
                                         <label class="checkbox">
-                                            <input type="radio" name="membership" value="commmpart" id="membershipCommPart"
+                                            <input type="radio" name="membership" value="commpart" id="membershipCommPart"
                                                    required/>
                                             Community Partner
                                         </label>
@@ -431,6 +431,23 @@
 </div>
 <script type="text/javascript">
     var priceMap = {
+        'jsc-pool': 4.5,
+        'jsc-shb': 6,
+        'jsc-tsshb': 6,
+        'jsc-classes': 5,
+        'jsc-gym': 6,
+        'jsc-bouldering': 6,
+        'jsc-martial': 6,
+        'may-gym': 6,
+        'may-classes': 5,
+        'wln-wln': 6,
+        'wln-gym': 6,
+        'oth-glen': 0,
+        'oth-connaught': 0,
+        'oth-activenation': 0
+    };
+
+    var membershipMap = {
         "student": {
             "pf": 230,
             "ff": 165,
@@ -474,7 +491,7 @@
 
     function calculateResult() {
         var membershipType = $('input[name=membership]:checked').val();
-        var membership = priceMap[membershipType];
+        var membership = membershipMap[membershipType];
 
         var type = $("#resultType");
         var price = $("#resultPrice");
@@ -491,7 +508,6 @@
         }
 
         var formData = $("form").serializeArray();
-        console.log(formData);
 
         if (formData.length === 2) {
             if (formData[1].value === "1") {
@@ -516,14 +532,10 @@
             canPAYG = false;
         }
 
-        console.log(canPAYG);
-
         var result = calculatePAYG(formData);
         var total = result[0];
         var peakTotal = result[1];
         if (canPAYG) {
-            console.log(total);
-            console.log(membership.ff);
             if (formData[1].value === "1") {
                 if (membership.sp + total <= membership.ff) {
                     type.text(type.text() + " - Sports Pass + PAYG");
@@ -544,16 +556,44 @@
         if (membershipType === "student" || membershipType === "youth") {
             time = "year";
         }
-        if (peakTotal >= (membership.pf - membership.ff)) {
+        if (checkWorkoutCentral(total) && (membership.wc < membership.ff || membership.wc * 12 < membership.ff)) {
+            type.text(type.text() + " - Workout Central");
+            price.text("£" + membership.wc + " (month)");
+        } else if (peakTotal >= (membership.pf - membership.ff)) {
             type.text(type.text() + " - Peak Performer");
             price.text("£" + membership.pf + " (" + time + ")");
-        } else {
-            type.text(type.text() + " - Frequent Fitness + Peak PAYG ");
+        } else if (peakTotal !== 0) {
+            type.text(type.text() + " - Frequent Fitness + Peak PAYG");
             price.text("£" + (membership.ff) + " (" + time + ") - PAYG £" + peakTotal);
+        } else {
+            type.text(type.text() + " - Frequent Fitness");
+            price.text("£" + (membership.ff) + " (" + time + ")");
         }
         link.attr("href", membership.link);
 
         goBack("frequency", "results");
+    }
+
+    function checkWorkoutCentral(total) {
+        if (!$("#facilitiesMAY-gym").is(":checked") && !$("#facilitiesMAY-classes").is(":checked")) {
+            return false;
+        }
+
+        console.log(total);
+
+        var mayGym = $("input[name=frequency-may-gym]:checked");
+        if (mayGym.length !== 0) {
+            total -= priceMap['may-gym'] * mayGym.val();
+        }
+
+        var mayClasses = $("input[name=frequency-may-classes]:checked");
+        if (mayClasses.length !== 0) {
+            total -= priceMap['may-classes'] * mayClasses.val();
+        }
+
+        console.log(total);
+
+        return total === 0;
     }
 
     function resultAUTeam() {
@@ -561,29 +601,13 @@
         var price = $("#resultPrice");
         var link = $("#resultLink");
 
-        var membership = priceMap[$('input[name=membership]:checked').val()];
+        var membership = membershipMap[$('input[name=membership]:checked').val()];
         type.text(type.text() + " Sports Pass");
         price.text("£" + membership.sp + " (year)");
         link.attr("href", membership.link);
     }
 
     function calculatePAYG(formData) {
-        var priceMap = {
-            'jsc-pool': 4.5,
-            'jsc-shb': 6,
-            'jsc-tsshb': 6,
-            'jsc-classes': 5,
-            'jsc-gym': 6,
-            'jsc-bouldering': 6,
-            'jsc-martial': 6,
-            'may-gym': 6,
-            'may-classes': 5,
-            'wln-wln': 6,
-            'wln-gym': 6,
-            'oth-glen': 0,
-            'oth-connaught': 0,
-            'oth-activenation': 0
-        };
         var total = 0;
         var peakTotal = 0;
 
