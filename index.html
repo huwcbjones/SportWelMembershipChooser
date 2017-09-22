@@ -556,7 +556,7 @@
         if (membershipType === "student" || membershipType === "youth") {
             time = "year";
         }
-        if (checkWorkoutCentral(total) && (membership.wc < membership.ff || membership.wc * 12 < membership.ff)) {
+        if (formData[1].value !== "1" && checkWorkoutCentral(total) && (membership.wc < membership.ff || membership.wc * 12 < membership.ff)) {
             type.text(type.text() + " - Workout Central");
             price.text("£" + membership.wc + " (month)");
         } else if (peakTotal >= (membership.pf - membership.ff)) {
