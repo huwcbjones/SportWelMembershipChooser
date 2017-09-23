@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -409,7 +410,7 @@
                                     <input type="button" class="btn btn-default btn-lg"
                                            onclick="location.reload()"
                                            value="Start Over"/>
-                                    <br class="visible-xs" />
+                                    <br class="visible-xs"/>
                                 </div>
                                 <div class="col-xs-8 text-right">
                                     <a href="#" class="btn btn-lg btn-primary" id="resultLink" target="_blank">View More Details</a>
@@ -442,42 +443,105 @@
 
     var membershipMap = {
         "student": {
-            "pf": 230,
-            "ff": 165,
-            "wc": 20,
-            "sp": 110,
+            "pp": {
+                "type": "year",
+                "price": 230
+            },
+            "ff": {
+                "type": "year",
+                "price": 165
+            },
+            "wc": {
+                "type": "month",
+                "price": 20
+            },
+            "sp": {
+                "type": "year",
+                "price": 110
+            },
             "link": "https://www.southampton.ac.uk/sportandwellbeing/membership/student-membership.page?"
         },
         "staff": {
-            "pf": 23,
-            "ff": 20,
-            "wc": 20,
-            "sp": 120,
+            "pp": {
+                "type": "month",
+                "price": 23
+            },
+            "ff": {
+                "type": "month",
+                "price": 20
+            },
+            "wc": {
+                "type": "month",
+                "price": 20
+            },
+            "sp": {
+                "type": "year",
+                "price": 120
+            },
             "link": "https://www.southampton.ac.uk/sportandwellbeing/membership/staff-membership.page?"
         },
         "commpart": {
-            "pf": 23,
-            "ff": 20,
-            "wc": 20,
-            "sp": 120,
+            "pp": {
+                "type": "month",
+                "price": 23
+            },
+            "ff": {
+                "type": "month",
+                "price": 20
+            },
+            "wc": {
+                "type": "month",
+                "price": 20
+            },
+            "sp": {
+                "type": "year",
+                "price": 120
+            },
             "link": "https://www.southampton.ac.uk/sportandwellbeing/membership/community-partner-membership.page?"
         },
         "public": {
-            "pf": 27,
-            "ff": 25,
-            "wc": 20,
-            "sp": 130,
+            "pp": {
+                "type": "month",
+                "price": 27
+            },
+            "ff": {
+                "type": "month",
+                "price": 25
+            },
+            "wc": {
+                "type": "month",
+                "price": 20
+            },
+            "sp": {
+                "type": "year",
+                "price": 130
+            },
             "link": "https://www.southampton.ac.uk/sportandwellbeing/membership/public-membership.page?"
         },
         "youth": {
-            "pf": 230,
-            "ff": 165,
-            "wc": 20,
-            "sp": 110,
+            "pp": {
+                "type": "year",
+                "price": 230
+            },
+            "ff": {
+                "type": "year",
+                "price": 165
+            },
+            "wc": {
+                "type": "month",
+                "price": 20
+            },
+            "sp": {
+                "type": "year",
+                "price": 110
+            },
             "link": "https://www.southampton.ac.uk/sportandwellbeing/membership/child-youth-membership.page?#youth_(16-17_years_old"
         },
         "child": {
-            "child": 60,
+            "child": {
+                "type": "year",
+                "price": 60
+            },
             "link": "https://www.southampton.ac.uk/sportandwellbeing/membership/child-youth-membership.page?#child_(4-15_years_old)"
         }
     };
@@ -494,7 +558,8 @@
 
         // Child Membership
         if (membershipType === "child") {
-            price.text("£" + membership.child + " (year)");
+            console.log("Applicable membership: child");
+            price.text("£" + membership.child.price + " (" + membership.child.type + "ly)");
             link.attr("href", membership.link);
             goBack("frequency", "results");
             return;
@@ -503,9 +568,14 @@
         var formData = $("form").serializeArray();
 
         if (formData.length === 2) {
+            console.debug("No facilities selected.");
             if (formData[1].value === "1") {
+                console.debug("AU Team = yes");
+                console.log("Applicable membership: Sports Pass");
                 resultAUTeam();
             } else {
+                console.debug("AU Team = no");
+                console.log("Applicable membership: none");
                 type.text("No Suitable Membership Found");
                 price.text("-");
                 link.addClass("hidden");
@@ -528,16 +598,29 @@
         var result = calculatePAYG(formData);
         var total = result[0];
         var peakTotal = result[1];
+
+        console.debug("PAYG Total: " + total);
+        console.debug("PAYG Peak Total: " + peakTotal);
+
+        var ffPrice = membership.ff.price;
+        if(membership.ff.type === "month") ffPrice *= 12;
+
+        var ppPrice = membership.pp.price;
+        if(membership.pp.type === "month") ppPrice *= 12;
+
+        console.log("FF Adjusted Price: " + ffPrice);
+        console.log("PP Adjusted Price: " + ppPrice);
+
         if (canPAYG) {
             if (formData[1].value === "1") {
-                if (membership.sp + total <= membership.ff) {
-                    type.text(type.text() + " - Sports Pass + PAYG");
-                    price.text("£" + (membership.sp + total) + " (estimated cost including PAYG)");
+                if (membership.sp.price + total <= ffPrice) {
+                    type.text(type.text() + " - Sports Pass (" + membership.sp.type + "ly) + PAYG");
+                    price.text("£" + (membership.sp.price + total) + " (estimated cost including PAYG)");
                     link.attr("href", membership.link);
                     goBack("frequency", "results");
                     return;
                 }
-            } else if (total <= membership.ff) {
+            } else if (total <= ffPrice) {
                 type.text(type.text() + " - Pay As You Go");
                 price.text("£" + total + " (estimated cost for PAYG)");
                 link.attr("href", membership.link);
@@ -545,22 +628,19 @@
                 return;
             }
         }
-        var time = "month";
-        if (membershipType === "student" || membershipType === "youth") {
-            time = "year";
-        }
+
         if (formData[1].value !== "1" && checkWorkoutCentral(total) && (membership.wc < membership.ff || membership.wc * 12 < membership.ff)) {
             type.text(type.text() + " - Workout Central");
-            price.text("£" + membership.wc + " (month)");
-        } else if (peakTotal >= (membership.pf - membership.ff)) {
+            price.text("£" + membership.wc.price + " ("+ membership.wc.type + "ly)");
+        } else if (peakTotal >= (ppPrice - ffPrice) && total >= ppPrice) {
             type.text(type.text() + " - Peak Performer");
-            price.text("£" + membership.pf + " (" + time + ")");
-        } else if (peakTotal !== 0) {
+            price.text("£" + membership.pp.price + " (" + membership.pp.type + "ly)");
+        } else if (peakTotal !== 0 && peakTotal !== total) {
             type.text(type.text() + " - Frequent Fitness + Peak PAYG");
-            price.text("£" + (membership.ff) + " (" + time + ") - PAYG £" + peakTotal);
+            price.text("£" + (membership.ff.price) + " (" + membership.ff.type + "ly) - PAYG £" + peakTotal);
         } else {
             type.text(type.text() + " - Frequent Fitness");
-            price.text("£" + (membership.ff) + " (" + time + ")");
+            price.text("£" + (membership.ff.price) + " (" + membership.ff.type + "ly)");
         }
         link.attr("href", membership.link);
 
@@ -596,7 +676,7 @@
 
         var membership = membershipMap[$('input[name=membership]:checked').val()];
         type.text(type.text() + " Sports Pass");
-        price.text("£" + membership.sp + " (year)");
+        price.text("£" + membership.sp.price + " ("+ membership.sp.type + "ly)");
         link.attr("href", membership.link);
     }
 
