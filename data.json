@@ -1,0 +1,420 @@
+{
+  "payg": {
+    "jsc": {
+      "display": "Jubilee Sports Centre",
+      "items": [
+        {
+          "id": "pool",
+          "display": "Swimming Pool",
+          "price": 4.5,
+          "requires": {
+            "type": [],
+            "sub": []
+          },
+          "excludes": {
+            "type": [],
+            "sub": [
+              "wc"
+            ]
+          }
+        },
+        {
+          "id": "shb",
+          "display": "Sports Hall Bookings",
+          "price": 6,
+          "requires": {
+            "type": [],
+            "sub": []
+          },
+          "excludes": {
+            "type": [],
+            "sub": [
+              "wc"
+            ]
+          }
+        },
+        {
+          "id": "tsshb",
+          "display": "Team Southampton Sports Hall Bookings",
+          "price": 6,
+          "requires": {
+            "type": [],
+            "sub": []
+          },
+          "excludes": {
+            "type": [],
+            "sub": [
+              "wc"
+            ]
+          }
+        },
+        {
+          "id": "classes",
+          "display": "Fitness Classes",
+          "price": 5,
+          "requires": {
+            "type": [],
+            "sub": []
+          },
+          "excludes": {
+            "type": [
+              "child"
+            ],
+            "sub": [
+              "wc"
+            ]
+          }
+        },
+        {
+          "id": "gym",
+          "display": "Fitness Suite (Gym)",
+          "price": 6,
+          "requires": {
+            "type": [],
+            "sub": []
+          },
+          "excludes": {
+            "type": [
+              "child"
+            ],
+            "sub": [
+              "wc"
+            ]
+          }
+        },
+        {
+          "id": "bouldering",
+          "display": "Bouldering Wall",
+          "price": 6,
+          "requires": {
+            "type": [],
+            "sub": []
+          },
+          "excludes": {
+            "type": [
+              "child"
+            ],
+            "sub": [
+              "wc"
+            ]
+          }
+        },
+        {
+          "id": "martial",
+          "display": "Martial Arts Room",
+          "price": 6,
+          "requires": {
+            "type": [],
+            "sub": []
+          },
+          "excludes": {
+            "type": [
+              "child"
+            ],
+            "sub": [
+              "wc",
+              "payg"
+            ]
+          }
+        }
+      ]
+    },
+    "may": {
+      "display": "Mayflower",
+      "items": [
+        {
+          "id": "gym",
+          "display": "Mayflower Gym",
+          "price": 6,
+          "requires": {
+            "type": [],
+            "sub": []
+          },
+          "excludes": {
+            "type": [
+              "child"
+            ],
+            "sub": ["sp"]
+          }
+        },
+        {
+          "id": "classes",
+          "display": "Mayflower Fitness Classes",
+          "price": 6,
+          "requires": {
+            "type": [],
+            "sub": []
+          },
+          "excludes": {
+            "type": [
+              "child"
+            ],
+            "sub": ["sp"]
+          }
+        }
+      ]
+    },
+    "wln": {
+      "display": "Wide Lane",
+      "items": [
+        {
+          "id": "wln",
+          "display": "Wide Lane (Rubber Crumb, Tennis, Netball",
+          "price": 6,
+          "requires": {
+            "type": [],
+            "sub": []
+          },
+          "excludes": {
+            "type": [
+              "child"
+            ],
+            "sub": [
+              "wc"
+            ]
+          }
+        },
+        {
+          "id": "gym",
+          "display": "Team Southampton Gym",
+          "price": 6,
+          "requires": {
+            "type": [],
+            "sub": []
+          },
+          "excludes": {
+            "type": [],
+            "sub": [
+              "wc",
+              "payg"
+            ]
+          }
+        }
+      ]
+    },
+    "oth": {
+      "display": "Other",
+      "items": [
+        {
+          "id": "connaught",
+          "display": "Connaught Gym",
+          "price": 0,
+          "requires": {
+            "type": [],
+            "sub": [
+              "pp",
+              "ff"
+            ]
+          },
+          "excludes": {
+            "type": [],
+            "sub": [
+              "payg"
+            ]
+          }
+        },
+        {
+          "id": "glen",
+          "display": "Glen Eyre Gym",
+          "price": 0,
+          "requires": {
+            "type": [],
+            "sub": [
+              "pp",
+              "ff"
+            ]
+          },
+          "excludes": {
+            "type": [],
+            "sub": ["payg"]
+          }
+        },
+        {
+          "id": "activenation",
+          "display": "Active Nation",
+          "price": 0,
+          "requires": {
+            "type": [
+              "staff",
+              "student"
+            ],
+            "sub": [
+              "pp",
+              "ff",
+              "wc"
+            ]
+          },
+          "excludes": {
+            "type": [],
+            "sub": [
+              "payg"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "membership": {
+    "student": {
+      "display": "Student",
+      "auTeam": true,
+      "pp": {
+        "display": "Peak Performer",
+        "type": "year",
+        "price": 230
+      },
+      "ff": {
+        "display": "Frequent Fitness",
+        "type": "year",
+        "price": 165
+      },
+      "wc": {
+        "display": "Workout Central",
+        "type": "month",
+        "price": 20
+      },
+      "sp": {
+        "display": "Sports Pass",
+        "type": "year",
+        "price": 110
+      },
+      "link": "https://www.southampton.ac.uk/sportandwellbeing/membership/student-membership.page?"
+    },
+    "staff": {
+      "display": "Staff",
+      "auTeam": true,
+      "facilities": true,
+      "pp": {
+        "display": "Peak Performer",
+        "type": "month",
+        "price": 23
+      },
+      "ff": {
+        "display": "Frequent Fitness",
+        "type": "month",
+        "price": 20
+      },
+      "wc": {
+        "display": "Workout Central",
+        "type": "month",
+        "price": 20
+      },
+      "sp": {
+        "display": "Sports Pass",
+        "type": "year",
+        "price": 120
+      },
+      "link": "https://www.southampton.ac.uk/sportandwellbeing/membership/staff-membership.page?"
+    },
+    "commpart": {
+      "display": "Community Partner",
+      "auTeam": true,
+      "pp": {
+        "display": "Peak Performer",
+        "type": "month",
+        "price": 23
+      },
+      "ff": {
+        "display": "Frequent Fitness",
+        "type": "month",
+        "price": 20
+      },
+      "wc": {
+        "display": "Workout Central",
+        "type": "month",
+        "price": 20
+      },
+      "sp": {
+        "display": "Sports Pass",
+        "type": "year",
+        "price": 120
+      },
+      "link": "https://www.southampton.ac.uk/sportandwellbeing/membership/community-partner-membership.page?"
+    },
+    "alumni": {
+      "display": "1st Year Almuni",
+      "auTeam": true,
+      "pp": {
+        "display": "Peak Performer",
+        "type": "year",
+        "price": 230
+      },
+      "ff": {
+        "display": "Frequent Fitness",
+        "type": "year",
+        "price": 165
+      },
+      "wc": {
+        "display": "Workout Central",
+        "type": "month",
+        "price": 20
+      },
+      "sp": {
+        "display": "Sports Pass",
+        "type": "year",
+        "price": 110
+      },
+      "link": "https://www.southampton.ac.uk/sportandwellbeing/membership/community-partner-membership.page?"
+    },
+    "public": {
+      "display": "Public",
+      "auTeam": true,
+      "pp": {
+        "type": "month",
+        "display": "Peak Performer",
+        "price": 27
+      },
+      "ff": {
+        "type": "month",
+        "display": "Frequent Fitness",
+        "price": 25
+      },
+      "wc": {
+        "type": "month",
+        "display": "Workout Central",
+        "price": 20
+      },
+      "sp": {
+        "type": "year",
+        "display": "Sports Pass",
+        "price": 130
+      },
+      "link": "https://www.southampton.ac.uk/sportandwellbeing/membership/public-membership.page?"
+    },
+    "youth": {
+      "display": "Youth (16-17)",
+      "auTeam": true,
+      "pp": {
+        "type": "year",
+        "display": "Peak Performer",
+        "price": 230
+      },
+      "ff": {
+        "type": "year",
+        "display": "Frequent Fitness",
+        "price": 165
+      },
+      "wc": {
+        "type": "month",
+        "display": "Workout Central",
+        "price": 20
+      },
+      "sp": {
+        "type": "year",
+        "display": "Sports Pass",
+        "price": 110
+      },
+      "link": "https://www.southampton.ac.uk/sportandwellbeing/membership/child-youth-membership.page?#youth_(16-17_years_old"
+    },
+    "child": {
+      "display": "Child (4-15)",
+      "auTeam": false,
+      "child": {
+        "display": "Child",
+        "type": "year",
+        "price": 60
+      },
+      "link": "https://www.southampton.ac.uk/sportandwellbeing/membership/child-youth-membership.page?#child_(4-15_years_old)"
+    }
+  }
+}
