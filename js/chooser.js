@@ -317,10 +317,10 @@ Chooser.calculateResult = function () {
     // Check if Sports Pass (+ PAYG) is cheaper
     //<editor-fold desc="Sports Pass">
     if (
-        Chooser.options.auTeam && (
-            Chooser.options.subscriptions.sp === true
-            || (spPrice + offPeakPAYG <= ffPrice && spPrice + peakPAYG <= ppPrice)
-        )
+        Chooser.options.auTeam
+        && Chooser.options.subscriptions.sp === true
+        && spPrice + offPeakPAYG <= ffPrice
+        && spPrice + peakPAYG <= ppPrice
     ) {
         if (totalPAYG === 0) {
             type.val(type.val() + " - " + subscriptions["sp"]["display"]);
